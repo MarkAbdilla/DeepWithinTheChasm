@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -10,6 +11,7 @@ public class EnemyAI : MonoBehaviour
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
+    bool isProvoked = false;
 
     private void Start()
     {
@@ -19,9 +21,42 @@ public class EnemyAI : MonoBehaviour
     private void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (distanceToTarget <= chaseRange)
+        if (isProvoked)
         {
+            EngageTarget();
+        }
+        else if(distanceToTarget <= chaseRange)
+        {
+            isProvoked = true;
             navMeshAgent.SetDestination(target.transform.position);
         }
+    }
+
+    private void EngageTarget()
+    {
+        if(distanceToTarget > navMeshAgent.stoppingDistance)
+        {
+            ChaseTarget();
+        }
+        if (distanceToTarget <= navMeshAgent.stoppingDistance)
+        {
+            AttackTarget();
+        }
+    }
+
+    private void ChaseTarget()
+    {
+        navMeshAgent.SetDestination(target.transform.position);
+    }
+
+    private void AttackTarget()
+    {
+        print("You are being cuddled <3");
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(0f, 0f, 0f, 0.75f);
+        Gizmos.DrawSphere(transform.position, chaseRange);
     }
 }
