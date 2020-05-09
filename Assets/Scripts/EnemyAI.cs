@@ -28,13 +28,13 @@ public class EnemyAI : MonoBehaviour
         else if(distanceToTarget <= chaseRange)
         {
             isProvoked = true;
-            navMeshAgent.SetDestination(target.transform.position);
+            navMeshAgent.SetDestination(target.position);
         }
     }
 
     private void EngageTarget()
     {
-        if(distanceToTarget > navMeshAgent.stoppingDistance)
+        if(distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
         }
@@ -46,11 +46,14 @@ public class EnemyAI : MonoBehaviour
 
     private void ChaseTarget()
     {
-        navMeshAgent.SetDestination(target.transform.position);
+        GetComponent<Animator>().SetBool("attacked", false);
+        GetComponent<Animator>().SetTrigger("move");
+        navMeshAgent.SetDestination(target.position);
     }
 
     private void AttackTarget()
     {
+        GetComponent<Animator>().SetBool("attacked", true);
         print("You are being cuddled <3");
     }
 
