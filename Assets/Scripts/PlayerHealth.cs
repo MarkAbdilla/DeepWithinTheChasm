@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
         playerHitPoints -= damage;
         if (playerHitPoints <= 0)
         {
-            print("You dead nigga");
+            GetComponent<DeathHandler>().HandleDeath();
         }
     }
 }

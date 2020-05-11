@@ -31,24 +31,6 @@ Transform:
   m_Father: {fileID: 1770596882217725837}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1770596882372086015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4106325096852015567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb3341fee5e93404e99eea2f9936eaef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpCamera: {fileID: 1770596882219331981}
-  range: 100
-  weaponDamage: 10
-  muzzleFlash: {fileID: 114156093378052135}
-  hitEffect: {fileID: 3042521736508666357, guid: ece544e520c49054ba45009fd842f56a,
-    type: 3}
 --- !u!1 &1770596882218218409
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +212,8 @@ GameObject:
   - component: {fileID: 1770596882230931469}
   - component: {fileID: 1770596882228938313}
   - component: {fileID: 1770596881880842706}
+  - component: {fileID: 1195887472820302099}
+  - component: {fileID: 6880990129949256601}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -364,6 +348,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHitPoints: 100
+--- !u!114 &1195887472820302099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770596882218218411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0cb88ee1994e94faac4fa4764ee8f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
+--- !u!114 &6880990129949256601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770596882218218411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479f006db5dd0b54ca63db8e46d1a514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 1770596882219331981}
+  zoomedInFOV: 20
+  zoomedOutFOV: 60
+--- !u!114 &1770596882372086015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4106325096852015567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3341fee5e93404e99eea2f9936eaef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpCamera: {fileID: 1770596882219331981}
+  range: 100
+  weaponDamage: 10
+  muzzleFlash: {fileID: 114156093378052135}
+  hitEffect: {fileID: 3042521736508666357, guid: ece544e520c49054ba45009fd842f56a,
+    type: 3}
 --- !u!1001 &1770596883054924361
 PrefabInstance:
   m_ObjectHideFlags: 0
