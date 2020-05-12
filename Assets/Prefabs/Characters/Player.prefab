@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1113437949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466180141765668141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479f006db5dd0b54ca63db8e46d1a514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 1770596882219331981}
+  fpsController: {fileID: 1770596882228938313}
+  zoomedInFOV: 20
+  zoomedOutFOV: 60
+  zoomOutSensitivity: 2
+  zoomInSensitivity: 0.5
 --- !u!1 &1770596881700973160
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +250,7 @@ GameObject:
   - component: {fileID: 1770596881320436279}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +407,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b96e7297c0986b4284559b62ed80f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 10
+  - ammoType: 1
+    ammoAmount: 5
+  - ammoType: 2
+    ammoAmount: 20
 --- !u!1001 &1770596883054924361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -492,6 +516,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1770596881700973163}
     m_Modifications:
+    - target: {fileID: 1928431577228742084, guid: 0b245970af356ba4f83caef3bc8511c0,
+        type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 1770596882219331981}
+    - target: {fileID: 1928431577228742084, guid: 0b245970af356ba4f83caef3bc8511c0,
+        type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 1770596882228938313}
     - target: {fileID: 2337074158996965286, guid: 0b245970af356ba4f83caef3bc8511c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -649,6 +683,12 @@ PrefabInstance:
       objectReference: {fileID: 1770596881320436279}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9d1936ce7fde04db6eeef3df4569a5, type: 3}
+--- !u!1 &466180141765668141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2337074158997199750, guid: ad9d1936ce7fde04db6eeef3df4569a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2744593017205520043}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &466180141766095117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2337074158996965286, guid: ad9d1936ce7fde04db6eeef3df4569a5,
