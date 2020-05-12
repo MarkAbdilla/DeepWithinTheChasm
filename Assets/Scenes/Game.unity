@@ -1813,6 +1813,30 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8c19a618a0bd9844583b91dca0875a34, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45635d5190a12bc4884469b7dcafa846, type: 3}
+--- !u!1 &1113437944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 466180141765668141, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
+    type: 3}
+  m_PrefabInstance: {fileID: 1770596881320436277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1113437945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113437944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479f006db5dd0b54ca63db8e46d1a514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 0}
+  fpsController: {fileID: 0}
+  zoomedInFOV: 20
+  zoomedOutFOV: 60
+  zoomOutSensitivity: 2
+  zoomInSensitivity: 0.5
 --- !u!1001 &1155500567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3622,6 +3646,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 466180141765668141, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1195887472820302099, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
         type: 3}
       propertyPath: gameOverCanvas
@@ -3686,6 +3715,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106325096852015567, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221294316736237833, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 278b9a2ad31674a41821f5b9ec0c8b53, type: 3}

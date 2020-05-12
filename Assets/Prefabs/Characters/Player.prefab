@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 1770596882228938313}
   - component: {fileID: 1770596881880842706}
   - component: {fileID: 1195887472820302099}
-  - component: {fileID: 6880990129949256601}
   - component: {fileID: 1770596881320436279}
   m_Layer: 0
   m_Name: Player
@@ -364,23 +363,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &6880990129949256601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770596882218218411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 479f006db5dd0b54ca63db8e46d1a514, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsCamera: {fileID: 1770596882219331981}
-  zoomedInFOV: 20
-  zoomedOutFOV: 60
-  zoomOutSensitivity: 2
-  zoomInSensitivity: 0.5
 --- !u!114 &1770596881320436279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +443,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carbine
       objectReference: {fileID: 0}
+    - target: {fileID: 6871910497348750451, guid: ada2587319194f542957a8c2ae277cb9,
+        type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 1770596882219331981}
+    - target: {fileID: 6871910497348750451, guid: ada2587319194f542957a8c2ae277cb9,
+        type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 1770596882228938313}
     - target: {fileID: 7384829961306727108, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
       propertyPath: fpCamera
