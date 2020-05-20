@@ -33,12 +33,12 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44296238, g: 0.4921419, b: 0.5718807, a: 1}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.2780389, g: 0.29709437, b: 0.34469566, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -74,7 +74,7 @@ LightmapSettings:
     m_MixedBakeMode: 2
     m_BakeBackend: 1
     m_PVRSampling: 1
-    m_PVRDirectSampleCount: 32
+    m_PVRDirectSampleCount: 64
     m_PVRSampleCount: 500
     m_PVRBounces: 2
     m_PVREnvironmentSampleCount: 500
@@ -962,7 +962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -1160,6 +1160,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1770596881320436277}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1060648367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060648368}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1060648368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060648367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 88, y: 155.84375, z: 165.73438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1141658524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3210536078685566380, guid: 312346cd6392917429b529275dd28268,
@@ -2728,12 +2758,12 @@ PrefabInstance:
     - target: {fileID: 1770596882217725839, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.2
+      value: 42.5
       objectReference: {fileID: 0}
     - target: {fileID: 1770596882217725839, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.7
+      value: 65.7
       objectReference: {fileID: 0}
     - target: {fileID: 1770596882217725839, guid: 278b9a2ad31674a41821f5b9ec0c8b53,
         type: 3}
