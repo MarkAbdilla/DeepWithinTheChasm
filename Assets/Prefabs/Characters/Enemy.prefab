@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514cb203e37dbc341ae40353e94dd027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1770596882217725839, guid: 278b9a2ad31674a41821f5b9ec0c8b53, type: 3}
   chaseRange: 12
   turnSpeed: 5
   isDead: 0
