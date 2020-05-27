@@ -6,6 +6,19 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 
+    private void Awake()
+    {
+        int numOfSceneLoaders = FindObjectsOfType<SceneLoader>().Length;
+        if(numOfSceneLoaders != 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this);
+        }
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(2);

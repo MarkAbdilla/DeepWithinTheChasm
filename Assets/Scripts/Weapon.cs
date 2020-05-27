@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
+    [SerializeField] AudioClip noBulletSound;
 
     bool canShoot = true;
 
@@ -36,7 +37,12 @@ public class Weapon : MonoBehaviour
         {
             PlayMuzzleFlash();
             ProcessRayCast();
+            GetComponent<AudioSource>().Play();
             ammoSlot.ReduceAmmo(ammoType);
+        }
+        else
+        {
+            GetComponent<AudioSource>().PlayOneShot(noBulletSound);
         }
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;

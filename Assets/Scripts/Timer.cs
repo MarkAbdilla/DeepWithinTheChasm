@@ -38,4 +38,9 @@ public class Timer : MonoBehaviour
             deathHandler.HandleDeath();
         }
     }
+
+    public float GetTimeLeft()
+    {
+        return countdownTimerInSeconds;
+    }
 }

@@ -9,9 +9,15 @@ public class PlayerHealth : MonoBehaviour
     public void DamagePlayer(float damage)
     {
         playerHitPoints -= damage;
+        GetHealth();
         if (playerHitPoints <= 0)
         {
             GetComponent<DeathHandler>().HandleDeath();
         }
+    }
+
+    public float GetHealth()
+    {
+        return playerHitPoints;
     }
 }
