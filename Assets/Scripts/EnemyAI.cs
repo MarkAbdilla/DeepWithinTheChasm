@@ -35,7 +35,6 @@ public class EnemyAI : MonoBehaviour
             if (isProvoked)
             {
                 EngageTarget();
-                StartCoroutine(PlayEnemySounds());
             }
             else if (distanceToTarget <= chaseRange)
             {
@@ -67,6 +66,7 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Animator>().SetBool("attacked", false);
         GetComponent<Animator>().SetTrigger("move");
         navMeshAgent.SetDestination(target.position);
+        audioSource.PlayOneShot(enemyMoans[soundToPlay]);
     }
 
     private void AttackTarget()
@@ -81,12 +81,6 @@ public class EnemyAI : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
-    }
-
-    IEnumerator PlayEnemySounds()
-    {
-        audioSource.PlayOneShot(enemyMoans[soundToPlay]);
-        yield return new WaitForSeconds(5f);
     }
 
     private void OnDrawGizmosSelected()
