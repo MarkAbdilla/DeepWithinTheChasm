@@ -11,11 +11,17 @@ public class Ammo : MonoBehaviour
     {
         public AmmoType ammoType;
         public int ammoAmount;
+        public int ammoDamage;
     }
 
     public int GetCurrentAmmo(AmmoType ammoType)
     {
         return GetAmmoSlot(ammoType).ammoAmount;
+    }
+
+    public int GetCurrentAmmoDamage(AmmoType ammoType)
+    {
+        return GetAmmoSlot(ammoType).ammoDamage;
     }
 
     public void ReduceAmmo(AmmoType ammoType)

@@ -42,8 +42,9 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public float GetTimeLeft()
+    public int GetTimeLeft()
     {
-        return countdownTimerInSeconds;
+        int roundedTimeLeft = Mathf.RoundToInt(countdownTimerInSeconds);
+        return roundedTimeLeft;
     }
 }

@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514cb203e37dbc341ae40353e94dd027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   chaseRange: 12
   turnSpeed: 5
   enemyMoans: {fileID: 8300000, guid: f773798db46360e41ae7bdf4eb42359c, type: 3}
@@ -163,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e74ebb6ffacfa24f8a45fe4658dadb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 20
 --- !u!114 &1012854201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e810ea591be9d0e46a31dca8ef93f2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 5
 --- !u!82 &-5105999308419832350
 AudioSource:
   m_ObjectHideFlags: 0
