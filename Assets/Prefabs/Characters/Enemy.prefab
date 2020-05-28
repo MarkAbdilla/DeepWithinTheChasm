@@ -126,12 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514cb203e37dbc341ae40353e94dd027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1770596882217725839, guid: 278b9a2ad31674a41821f5b9ec0c8b53, type: 3}
+  target: {fileID: 0}
   chaseRange: 12
   turnSpeed: 5
-  enemyMoans:
-  - {fileID: 8300000, guid: f773798db46360e41ae7bdf4eb42359c, type: 3}
-  - {fileID: 8300000, guid: 4c735d48dc8f65b44808c347357c82d8, type: 3}
+  enemyMoans: {fileID: 8300000, guid: f773798db46360e41ae7bdf4eb42359c, type: 3}
   enemyScream: {fileID: 8300000, guid: 735cb9784ecffee4291a9086bbfea860, type: 3}
   isDead: 0
 --- !u!95 &9092668085755907892
@@ -191,13 +189,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 194
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54287cc0f6a1fe4783d5380b0346282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTimerInSeconds: 60
+  countdownTimerInSeconds: 120
 --- !u!65 &415778817
 BoxCollider:
   m_ObjectHideFlags: 0

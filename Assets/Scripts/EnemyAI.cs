@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
     [SerializeField] float turnSpeed = 5f;
-    [SerializeField] AudioClip[] enemyMoans;
+    [SerializeField] AudioClip enemyMoans;
     [SerializeField] AudioClip enemyScream;
 
     NavMeshAgent navMeshAgent;
@@ -23,7 +23,6 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        soundToPlay = UnityEngine.Random.Range(0, enemyMoans.Length);
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -66,7 +65,6 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Animator>().SetBool("attacked", false);
         GetComponent<Animator>().SetTrigger("move");
         navMeshAgent.SetDestination(target.position);
-        audioSource.PlayOneShot(enemyMoans[soundToPlay]);
     }
 
     private void AttackTarget()

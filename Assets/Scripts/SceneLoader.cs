@@ -19,14 +19,19 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
+    public void OpenInstructions()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(2);
     }
 
-    public void LoadInstructions()
+    public void LoadCredits()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
     }
 
     public void LoadMainMenu()
