@@ -8,10 +8,12 @@ public class Timer : MonoBehaviour
 
     private bool timerStarted = false;
     DeathHandler deathHandler;
+    BoxCollider boxCollider;
 
     private void Start()
     {
         deathHandler = FindObjectOfType<DeathHandler>();
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,6 +21,7 @@ public class Timer : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             timerStarted = true;
+            boxCollider.enabled = false;
         }
     }
 

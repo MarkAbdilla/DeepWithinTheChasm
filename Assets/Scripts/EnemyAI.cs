@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
     [SerializeField] float turnSpeed = 5f;
     [SerializeField] AudioClip enemyMoans;
@@ -17,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     bool isProvoked = false;
     int soundToPlay;
     AudioSource audioSource;
+    Transform target;
 
     public bool isDead = false;
 
@@ -24,6 +24,7 @@ public class EnemyAI : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         audioSource = GetComponent<AudioSource>();
+        target = FindObjectOfType<PlayerHealth>().transform;
     }
 
     private void Update()
